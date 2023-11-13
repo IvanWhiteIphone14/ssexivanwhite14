@@ -1,0 +1,1119 @@
+{% extends 'layouts/base_background.html' %}
+{% load static %}
+
+{% block title %} Masterpiece Vintage Cars  {% endblock title %}
+
+{% block body %} class="index-page bg-gray-200" {% endblock body %}
+
+{% block content %}
+
+</div></div></div>
+    <meta name="viewport" content="width=device-width, initial-scale=0.1">
+    <link rel="icon" href="https://i.ibb.co/V9xPkvr/download.png" type="image/x-icon"/>
+ <style>
+        /* Add your custom styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            font-family: "Century Gothic";
+        }
+        *{
+            font-family: "Century Gothic";
+        }
+        .header {
+            background-image: url('your-image-url.jpg');
+            background-size: cover;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .logo {
+            width: 300px;
+        }
+
+        .header h1 {
+            color: #fff;
+            font-size: 36px;
+        }
+
+        .nav {
+            background-color: #000;
+            text-align: center;
+            padding: 0px 0;
+            display: block;
+        }
+
+        .nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        .image-overlay {
+            background: url('https://static0.topspeedimages.com/wordpress/wp-content/uploads/2022/11/1973-Plymouth-Barracuda----Mecum-main-1.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+            height: 500px;
+            padding-top: 0px;
+        }
+
+        .overlay-content {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            height: 500px;
+        }
+
+        .overlay-content p {
+            color: #fff;
+        }
+
+        .stats {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .stats h2 {
+            font-size: 24px;
+        }
+
+        .stats p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .image-under-overlay {
+            max-width: 100%;
+            height: auto;
+        }
+.nav ul li a {
+    text-decoration: none;
+    transition: color 0.3s ease; /* Add a smooth transition for the color change */
+    font-size: 25px;
+    padding-right: 10px;
+    font-family: "Century Gothic";
+}
+
+.nav ul li a:hover {
+    color: navajowhite; /* Change to your desired hover color */
+    text-decoration: none;
+}
+.custom-button {
+             font-family: 'Century Gothic';
+            font-size: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: rgba(128, 128, 128, 0.7); /* Gray background color with 0.7 transparency */
+            color: white; /* White text color */
+            border: 2px solid #666; /* Border color */
+            border-radius: 5px; /* Add border radius */
+            transition: background-color 0.3s, border 0.3s, transform 0.3s; /* Add smooth transitions */
+        }
+
+        /* Change button background color and scale on hover */
+        .custom-button:hover {
+            background-color: rgba(0, 0, 0, 0.5); /* Darker gray on hover */
+            border: 2px solid rgba(0, 0, 0, 0.5);
+            color: white;
+            transform: scale(1.05); /* Scale on hover */
+        }
+
+        /* Adjust the button size for smaller screens */
+        @media (max-width: 480px) {
+            .custom-button {
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+        }
+
+        li{
+            transition: transform 0.3s;
+        }
+
+        li:hover{
+            transform: scale(1.05);
+        }
+
+        .pp1{
+            font-family: "Century Gothic";
+            transition: transform 0.3s;
+        }
+
+        .pp1:hover{
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+     <div class="nav">
+        <ul>
+            <li><a href=""><img src="https://i.ibb.co/4Y4QCrw/im1age.png" alt="Your Logo"></a></li>
+            <li><a href="#">Homepage</a></li>
+            <li><a href="#inventory">Inventory</a></li>
+            <li><a href="{% url 'feedback' %}">Feedback</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#contactus">Contact Us</a></li>
+        </ul>
+    </div>
+    <div class="image-overlay">
+        <div class="overlay-content">
+            <p class="pp1" style="padding-top: 160px; font-family: 'Century Gothic'; font-size: 45px; width: 70%">Driving Dreams</p>
+            <p class="pp1" style="font-family: 'Century Gothic'; font-size: 35px;width: 70%">Creating Legacies</p>
+             <button class="custom-button" onclick="scrollToInventory()">See Collection</button>
+        </div>
+    </div>
+
+ <script>
+        function scrollToInventory() {
+            document.getElementById('inventory').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+  <style>
+/* Add this CSS to your stylesheet */
+.card1 {
+    width: 300px;
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateX(-20px); /* Initial position, off-screen to the left */
+    transition: opacity 0.3s, transform 0.3s;
+}
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+@media (max-width: 768px) {
+    .image-container {
+        width: 100%;
+        height: 100%;
+    }
+    .card1{
+        width: 300px;
+    }
+
+}
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.image-container:hover .hover-overlay {
+    opacity: 1;
+}
+
+.hover-overlay i {
+    color: white;
+    font-size: 40px;
+}
+
+</style>
+
+
+
+
+</head>
+
+<section id="inventory" class="py-5">
+  <div class="container">
+    <h2 class="text-center mt-5 pp1" style="padding-bottom: 25px; font-family: 'Century Gothic' "c>Featured collection:</h2>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="filter-container pp1">
+          <h4>Sort By:</h4>
+          <select id="sorting-options" class="form-select">
+            <option value="price-asc">Price (Low to High)</option>
+            <option value="price-desc">Price (High to Low)</option>
+            <option value="year-asc">Year (Old to New)</option>
+            <option value="year-desc">Year (New to Old)</option>
+          </select>
+        </div>
+      </div>
+
+<script>
+
+</script>
+      <div class="col-md-3">
+        <div class="filter-container pp1">
+          <h4>Filter By Brand:</h4>
+          <select id="brand-filter" class="form-select" onchange="filterCars()">
+            <option value="all">All Brands</option>
+            {% for brand in brands %}
+    <option value="{{ brand }}">{{ brand }}</option>
+  {% endfor %}
+          </select>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="filter-container pp1" style="width: 500px">
+          <h4>Filter By Bodystyles:</h4>
+          <select id="type-filter" class="form-select" onchange="filterCarsByType()">
+            <option value="all">All Bodystyles</option>
+             {% for type in types %}
+    <option value="{{ type }}">{{ type }}</option>
+  {% endfor %}
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+ <style>
+    .car-info {
+        display: flex;
+        justify-content: space-between;
+    }
+</style>
+  <style>
+    .car-card {
+        position: relative;
+        overflow: hidden; /* Ensure overflow is hidden for smooth animation */
+    }
+
+    .brand-model-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+        background-color: rgba(100, 100, 100, 0.4); /* Semi-transparent background */
+        border-radius: 10px;
+        color: whitesmoke;
+        z-index: 150;
+        cursor: pointer;
+        transition: transform 0.3s ease-out; /* Transition on transform property for smooth animation */
+    }
+
+    .brand-model-container p {
+        margin: 0; /* Remove default margin to ensure proper positioning */
+    }
+
+    .car-details {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        align-items: flex-end;
+        z-index: 160;
+    }
+
+    .left-column, .right-column {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(100, 100, 100, 0.5);
+        border-radius: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+        color: whitesmoke;
+        z-index: 150;
+        cursor: pointer;
+        height: 26px;
+    }
+
+    /* Add hover styles for the brand-model-container */
+    .car-card:hover .brand-model-container {
+        transform: translateY(-100%); /* Move the container up by its height */
+    }
+</style>
+
+<div class="container car-list-container">
+    <div class="row" id="car-list">
+        <!-- Car listings will be generated here -->
+        {% for car in car_list %}
+            <div class="col-md-4 col-sm-6 car-container" data-brand="{{ car.brand }}" data-year="{{ car.year }}" data-price="{{ car.price }}" data-type="{{ car.type }}">
+                <div class="car-card">
+                    <a href="{% url 'car_details' car.id %}" style="position: relative; z-index: 140;">
+                    <div class="brand-model-container">
+                        <p><span style="font-weight: 700;">{{ car.brand }} {{ car.model }}</span></p>
+                    </div>
+                    <div class="car-image">
+
+                            <img src="{{ car.main_photo.url }}" alt="{{ car.brand }} {{ car.model }}">
+
+                    </div>
+                    <div class="car-details">
+                        <div class="left-column">
+                            <p><i class="fas fa-calendar"></i> Year: {{ car.year }}</p>
+                        </div>
+                        <div class="right-column">
+                            <p><i class="fas fa-dollar-sign"></i> Price: ${{ car.price }}</p>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+  </div>
+  <div class="text-center mt-4" style="display: block">
+    <button id="show-more" class="btn btn-custom">Show More</button>
+  </div>
+</section>
+    <style>
+  /* Style for the "Show More" button */
+  #show-more {
+    background-color: #8B4513;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  #show-more:hover {
+    background-color: #7b809a;
+  }
+</style>
+
+   <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const carList = document.getElementById("car-list");
+    const showMoreButton = document.getElementById("show-more");
+    const carContainers = Array.from(document.querySelectorAll(".car-container"));
+    const itemsToShow = 12; // Number of items to show initially
+    let visibleItems = itemsToShow;
+
+    // Function to show or hide car listings with animation
+    function toggleCarList() {
+    carContainers.forEach((car, index) => {
+        if (index < visibleItems) {
+            car.style.display = "block";
+            car.style.transition = "opacity 0.5s ease, transform 0.5s ease"; // Add transition property
+            setTimeout(() => {
+                car.style.opacity = 1;
+                car.style.transform = "translateX(0)";
+            }, 100 * index); // Delay the animation for each item
+        } else {
+            car.style.opacity = 0;
+            car.style.transform = "translateX(-20px)";
+            car.style.display = "none";
+        }
+    });
+
+    if (visibleItems < carContainers.length) {
+        showMoreButton.textContent = "Show More"; // Change the button text
+    } else {
+        showMoreButton.textContent = "Show Less"; // Change the button text
+    }
+}
+
+
+    // Initial setup
+    toggleCarList();
+
+    // Event listener for "Show More/Show Less" button
+    showMoreButton.addEventListener("click", function () {
+        if (visibleItems === itemsToShow) {
+            visibleItems = carContainers.length; // Show all cars
+        } else {
+            visibleItems = itemsToShow; // Show the initial number of cars
+        }
+        toggleCarList();
+    });
+
+    const sortingOptions = document.getElementById("sorting-options");
+
+    sortingOptions.addEventListener("change", function () {
+        const selectedOption = sortingOptions.value;
+
+        carContainers.sort((a, b) => {
+            switch (selectedOption) {
+                case "price-asc":
+                    return parseInt(a.dataset.price) - parseInt(b.dataset.price);
+                case "price-desc":
+                    return parseInt(b.dataset.price) - parseInt(a.dataset.price);
+                case "year-asc":
+                    return parseInt(a.dataset.year) - parseInt(b.dataset.year);
+                case "year-desc":
+                    return parseInt(b.dataset.year) - parseInt(a.dataset.year);
+                default:
+                    return 0;
+            }
+        });
+
+        // Clear the current car list
+        carList.innerHTML = '';
+
+        // Append the sorted car containers to the carList
+        carContainers.forEach((container, index) => {
+            carList.appendChild(container);
+            // Trigger reflow for the transition to work
+            container.getBoundingClientRect();
+            container.style.transition = "transform 0.5s ease"; // Add transition property
+            container.style.transform = `translateX(${index * 25}%)`;
+        });
+
+        // Update the visibleItems variable if needed
+        visibleItems = itemsToShow;
+
+        // Show/hide cars based on the current visibleItems value
+        toggleCarList();
+    });
+});
+
+function filterCars() {
+    var selectedBrand = document.getElementById("brand-filter").value;
+    var carContainers = document.getElementsByClassName("car-container");
+
+    // Initially show all cars
+    for (var i = 0; i < carContainers.length; i++) {
+        carContainers[i].style.display = "block";
+    }
+
+    // Hide cars that don't match the selected brand
+    for (var i = 0; i < carContainers.length; i++) {
+        var carBrand = carContainers[i].getAttribute("data-brand");
+
+        if (selectedBrand !== "all" && carBrand !== selectedBrand) {
+            carContainers[i].style.display = "none";
+        }
+    }
+
+    // After filtering, trigger the animation
+    setTimeout(() => {
+        toggleCarList();
+    }, 100);
+}
+
+function filterCarsByType() {
+    var selectedType = document.getElementById("type-filter").value;
+    var carContainers = document.getElementsByClassName("car-container");
+
+    // Initially show all cars
+    for (var i = 0; i < carContainers.length; i++) {
+        carContainers[i].style.display = "block";
+    }
+
+    // Hide cars that don't match the selected bodystyle
+    for (var i = 0; i < carContainers.length; i++) {
+        var carType = carContainers[i].getAttribute("data-type");
+
+        if (selectedType !== "all" && carType !== selectedType) {
+            carContainers[i].style.display = "none";
+        }
+    }
+
+    // After filtering, trigger the animation
+    setTimeout(() => {
+        toggleCarList();
+    }, 100);
+}
+
+</script>
+
+
+
+
+<style>
+/* Custom button style */
+.btn-custom {
+  background-color: #3498db; /* Background color */
+  color: #fff; /* Text color */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+  background-color: #2980b9; /* Background color on hover */
+}
+
+/* Custom car listing design */
+.car-container {
+  margin-bottom: 20px;
+}
+
+.car-card {
+  border: 1px solid #e3e3e3;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.car-container:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+    transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+}
+
+.car-card {
+    position: relative;
+}
+
+.car-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid transparent; /* Initial transparent border */
+    transition: border 0.3s ease; /* Smooth transition for border */
+}
+
+.car-card:hover{
+    transform: scale(1.01);
+}
+
+.car-card:hover img{
+    transform: scale(1.05);
+}
+
+.car-container:hover .car-card::after {
+    border: 2px solid #000; /* Black border on hover */
+    transform: scale(1.01);
+}
+
+
+.car-image {
+  position: relative;
+  overflow: hidden;
+  /* Set a specific aspect ratio (e.g., 16:9) for the container */
+
+  /* Set a maximum width to prevent images from exceeding the container */
+  max-width: 100%;
+    max-height: 254px;
+}
+
+.car-image img {
+  width: 100%;
+  height: 254px;
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  transition: transform 0.3s ease-in-out;
+}
+
+.car-details {
+  padding: 15px;
+    height: 160px;
+}
+
+.car-title {
+  font-size: 1.25rem;
+  margin: 0;
+    height: 70px;
+}
+
+.car-info {
+  font-size: 0.875rem;
+  color: #777;
+  margin: 5px 0;
+}
+
+/* Style the "Show More" button */
+#show-more {
+  padding: 10px 20px;
+  font-size: 18px;
+}
+
+  /* Add your custom styles here */
+  .filter-container {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  #sorting-options,
+  #brand-filter,
+  #type-filter {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .car-list-container {
+    margin-top: 20px;
+  }
+
+  /* Style the "Show More" button */
+  #show-more {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+</style>
+
+
+
+<!-- Add your CSS and JavaScript here -->
+
+
+
+
+
+
+
+
+<div id="overlay5"></div>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#openDialogButton5").click(function () { // Use the unique ID for the button
+            $("#dialogBox5").fadeIn(); // Use the unique ID for the dialog box
+            $("#overlay5").fadeIn(); // Use the unique ID for the overlay
+        });
+
+        $("#closeDialogButton5").click(function () { // Use the unique ID for the button
+            $("#dialogBox5").fadeOut(); // Use the unique ID for the dialog box
+            $("#overlay5").fadeOut(); // Use the unique ID for the overlay
+        });
+    });
+</script>
+      <style>
+    #dialogBox5 { /* Unique ID for the first dialog box */
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        padding: 2%;
+        border-radius: 15px; /* Smoother edges */
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Smoother shadow */
+        z-index: 1000;
+        width: 60%; /* Adjust width as a percentage of the page */
+        max-width: 500px; /* Set a maximum width for very large screens */
+    }
+
+    #overlay5 { /* Unique ID for the first overlay */
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 999;
+
+
+    }
+</style>
+
+<style>
+    /* Stylish close button */
+    .close-button5 {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        outline: none;
+        color: #333; /* Change the color to your desired color */
+        transition: color 0.3s ease; /* Add a smooth color transition */
+    }
+
+    /* Hover effect for the close button */
+    .close-button5:hover {
+        color: red; /* Change the color on hover to your desired color */
+    }
+</style>
+
+</section>
+<section class="py-5">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-lg-6 mx-auto">
+        <h2 class="">Quality Assurance: On the road to Satisfaction</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <div class="card move-on-hover">
+              <img class="w-100" src="https://i0.wp.com/drivenman.com/wp-content/uploads/2020/06/shoppicture_corvette-scaled-1.jpg?resize=640%2C480&ssl=1" alt="aboutus" onclick="openDialogBox()">
+            </div>
+            <div class="mt-2 ms-2">
+              <h6 class="mb-0">Engine Check-ups</h6>
+              <p>Regular engine inspections to ensure peak performance.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 mt-md-0 mt-5">
+            <div class="card move-on-hover">
+              <img class="w-100" src="https://www.howacarworks.com/images/162/undefined_w1400.jpg" alt="contacus">
+            </div>
+            <div class="mt-2 ms-2">
+              <h6 class="mb-0">Quality Assurance</h6>
+              <p>Our commitment to delivering quality services.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 mt-md-3 mt-5">
+            <div class="card move-on-hover">
+              <img class="w-100" src="https://hagerty-media-prod.imgix.net/2020/06/23847355_10210645578235959_5094535199790984749_o.jpg?auto=format%2Ccompress&ixlib=php-3.3.0" alt="signin">
+            </div>
+            <div class="mt-2 ms-2">
+              <h6 class="mb-0">Detailing</h6>
+              <p>Attention to detail in every aspect of our work.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 mt-md-3 mt-5">
+            <div class="card move-on-hover">
+              <img class="w-100" src="https://hips.hearstapps.com/townandcountry/assets/16/14/1954-mercedes-300sl-gullwing-a_1.jpg" alt="author">
+            </div>
+            <div class="mt-2 ms-2">
+              <h6 class="mb-0">Premium Cars</h6>
+              <p>Explore our collection of timeless classics.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mt-4">
+        <div class="position-sticky" style="top: 100px !important">
+          <h4 class="">Explore Classic Car Listings, Meet Our Enthusiasts, and Get in Touch</h4>
+          <h6 class="text-secondary font-weight-normal">Discover a curated collection of timeless automotive wonders. Connect with fellow enthusiasts and reach out to us.</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.contact-text:hover{
+    color: #344767;
+}
+.contact-item{
+    color:  #344767;
+}
+</style>
+
+<!-- -------- START Content Presentation Docs ------- -->
+ <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title pp1" style="color: whitesmoke">Masterpiece Vintage Cars</h1>
+            <p class="hero-subtitle pp1">Your Destination for Classic Cars</p>
+        </div>
+    </header>
+
+    <section id="contactus" class="contact-section">
+        <div class="container">
+            <div class="contact-info">
+                <a href="tel:+14177309778" class="contact-text">
+                    <div class="contact-item pp1">
+                        <a href="tel:+14177309778" class="contact-text">
+                        <i class="bi bi-telephone"></i>
+                        <span class="contact-label">Phone number:</span>
+                        <span class="contact-text">+1 (417) 730-9778</span>
+                    </div>
+                </a>
+
+                <div class="contact-item pp1">
+                    <i class="bi bi-geo-alt"></i>
+                    <span class="contact-label">Address:</span>
+                    <span class="contact-text">675 US-31, Whiteland, IN 46184</span>
+                </div>
+                <div class="contact-item pp1">
+                    <i class="bi bi-envelope"></i>
+                    <span class="contact-label">E-mail:</span>
+                    <span class="contact-text">sales@masterpiecevintage.com</span>
+                </div>
+            </div>
+        </div>
+    </section>
+<section id="location" class="classic-car-location">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 pp1">
+        <h2 class="pp1">Our Location</h2>
+        <p>
+          Explore our classic car marketplace and showroom, situated in a beautifully restored historic building. Immerse yourself in the world of timeless automotive excellence and vintage charm.
+        </p>
+        <p>Visit us at:</p>
+        <address>
+          675 US-31, Whiteland,<br> IN 46184
+        </address>
+      </div>
+      <div class="col-md-6 pp1">
+        <div class="classic-car-location-map">
+            <a href="https://www.google.com/maps/place/30+Price+Ln,+Silex,+MO+63377/data=!4m2!3m1!1s0x87de920d503fced7:0xf3ade13658f5d06e?sa=X&ved=2ahUKEwjO0OC61_2BAxXokYkEHXhkAhAQ8gF6BAgREAA&ved=2ahUKEwjO0OC61_2BAxXokYkEHXhkAhAQ8gF6BAgTEAI">
+          <img src="https://gcdnb.pbrd.co/images/jSXYtCTagsj4.png?o=1" alt="Map" width="540px">
+                </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+.hero {
+    background: url('https://dealeraccelerate-all.s3.amazonaws.com/chipwynn/marketing_assets/39/20221104_151453.jpg') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-title {
+    font-size: 36px;
+    margin: 0;
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.contact-section {
+    background: #f5f5f5;
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 85%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-item {
+    flex: 0 0 calc(33.33% - 20px);
+    margin: 10px;
+    padding: 20px;
+    background: #fff;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.contact-item i {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-label {
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+}
+
+.contact-text {
+    font-size: 14px;
+}
+/* Background color for left column */
+.bg-primary {
+    background-color: #7b809a !important;
+}
+
+/* Text color for left column */
+</style>
+
+<!-- -------- END Content Presentation Docs ------- -->
+
+
+
+
+
+
+
+    </div>
+    <hr class="horizontal dark my-5">
+    <div class="row" style="margin-right: 0px">
+        <div class="col-lg-2 col-md-4 col-6 ms-lg-0 ms-md-auto">
+        <img class="w-100 opacity-6" src="https://i.ibb.co/1bDkypm/download.png" alt="Logo" style="width: 150%">
+      </div>
+        <div class="col-lg-2 col-md-4 col-6 ms-auto">
+        <p></p>
+      </div>
+      <div class="col-lg-2 col-md-4 col-6 ms-auto">
+        <p>©2023 Master Piece Vintage Cars Llc</p>
+      </div>
+      <div class="col-lg-2 col-md-4 col-6">
+        <p>675 US-31, Whiteland,
+IN 46184</p>
+      </div>
+      <div class="col-lg-2 col-md-4 col-6">
+        <p>+1 (417) 730-9778 </p>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-6 me-md-auto mx-md-0 mx-auto">
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- -------   END PRE-FOOTER 2 - simple social line w/ title & 3 buttons    -------- -->
+
+</div>
+
+{% endblock content %}
+
+{% block javascripts %}
+
+<!--  Plugin for TypedJS, full documentation here: https://github.com/inorganik/CountUp.js -->
+<script src="{% static 'js/plugins/countup.min.js' %}"></script>
+<script src="{% static 'js/plugins/choices.min.js' %}"></script>
+<script src="{% static 'js/plugins/prism.min.js' %}"></script>
+<script src="{% static 'js/plugins/highlight.min.js' %}"></script>
+<!--  Plugin for Parallax, full documentation here: https://github.com/dixonandmoe/rellax -->
+<script src="{% static 'js/plugins/rellax.min.js' %}"></script>
+<!--  Plugin for TiltJS, full documentation here: https://gijsroge.github.io/tilt.js/ -->
+<script src="{% static 'js/plugins/tilt.min.js' %}"></script>
+<!--  Plugin for Selectpicker - ChoicesJS, full documentation here: https://github.com/jshjohnson/Choices -->
+<script src="{% static 'js/plugins/choices.min.js' %}"></script>
+
+
+<script type="text/javascript">
+
+  if (document.getElementById('state1')) {
+    const countUp = new CountUp('state1', document.getElementById("state1").getAttribute("countTo"));
+    if (!countUp.error) {
+      countUp.start();
+    } else {
+      console.error(countUp.error);
+    }
+  }
+  if (document.getElementById('state2')) {
+    const countUp1 = new CountUp('state2', document.getElementById("state2").getAttribute("countTo"));
+    if (!countUp1.error) {
+      countUp1.start();
+    } else {
+      console.error(countUp1.error);
+    }
+  }
+  if (document.getElementById('state3')) {
+    const countUp2 = new CountUp('state3', document.getElementById("state3").getAttribute("countTo"));
+    if (!countUp2.error) {
+      countUp2.start();
+    } else {
+      console.error(countUp2.error);
+    };
+  }
+</script>
+
+       <script>
+        document.addEventListener("scroll", function() {
+            var nav = document.querySelector('.nav');
+            nav.classList.toggle('scrolled', window.scrollY > 0);
+        });
+    </script>
+
+<style>
+    .nav {
+        background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black background */
+        position: fixed; /* Position the navbar absolutely on top of the image */
+        width: 100%;
+         transition: background-color 1.5s ease;
+        z-index: 100;
+    }
+      .nav.scrolled {
+            background-color: #000; /* Background color after scrolling */
+        }
+
+    .nav ul {
+        padding-top: 15px;
+        margin-bottom: 0;
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .nav li {
+        list-style: none;
+        color: white; /* Text color for the navbar links */
+    }
+
+    .nav img {
+        width: 105px;
+    }
+
+    .image-overlay {
+        position: initial; /* Position the container relatively for absolute positioning of the navbar */
+    }
+
+    .overlay-content {
+        padding-top: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    /* Add more CSS styles for your links, such as changing their color, hover effects, etc. */
+    .nav a {
+        text-decoration: none;
+        color: white; /* Text color for the navbar links */
+        padding: 10px;
+    }
+    /* Common styles for zoom effect */
+.car-image-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.zoom {
+    transition: transform 0.3s ease;
+}
+
+.zoom:hover {
+    transform: scale(1.1);
+}
+
+/* Additional hover effects */
+.other-hover-effect {
+    /* Add styles for other hover effect */
+}
+
+.other-hover-effect:hover {
+    /* Add styles for other hover effect on hover */
+}
+</style>
+
+{% endblock javascripts %}
