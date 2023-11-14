@@ -182,9 +182,6 @@
             <li><a href="{% url 'main' %}#contactus">Contact Us</a></li>
         </ul>
     </div>
-    <div class="image-overlay">
-
-    </div>
 
  <script>
         function scrollToInventory() {
@@ -333,102 +330,270 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             font-family: 'Montserrat', sans-serif;
         }
+
+        .image-overlay {
+            background: url('https://americancollectors.com/wp-content/uploads/Transporting-Classic-Chevy-Bel-Air.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+            height: 500px;
+            padding-top: 0px;
+        }
+
+        .overlay-content {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            height: 500px;
+        }
+
+        .overlay-content p {
+            color: #fff;
+        }
 </style>
 
 
+    <div class="image-overlay" style="height: 350px">
+        <div class="overlay-content" style="height: 350px">
+            <p class="pp1" style="padding-top: 120px; font-family: 'Century Gothic'; font-size: 45px; width: 70%">Home delivery</p>
+        </div>
+    </div>
 
+ <script>
+        function scrollToInventory() {
+            document.getElementById('inventory').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+<script>
+        document.addEventListener("scroll", function() {
+            var nav = document.querySelector('.nav');
+            nav.classList.toggle('scrolled', window.scrollY > 0);
+        });
+    </script>
+    <style>
+    .nav {
+        background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black background */
+        position: fixed; /* Position the navbar absolutely on top of the image */
+        width: 100%;
+         transition: background-color 1.5s ease;
+        z-index: 100;
+    }
+      .nav.scrolled {
+            background-color: #000; /* Background color after scrolling */
+        }
+
+    .nav ul {
+        padding-top: 15px;
+        margin-bottom: 0;
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .nav li {
+        list-style: none;
+        color: white; /* Text color for the navbar links */
+    }
+
+    .nav img {
+        width: 105px;
+    }
+
+    .image-overlay {
+        position: initial; /* Position the container relatively for absolute positioning of the navbar */
+    }
+
+    .overlay-content {
+        padding-top: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    /* Add more CSS styles for your links, such as changing their color, hover effects, etc. */
+    .nav a {
+        text-decoration: none;
+        color: white; /* Text color for the navbar links */
+        padding: 10px;
+    }
+    /* Common styles for zoom effect */
+.car-image-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.zoom {
+    transition: transform 0.3s ease;
+}
+
+.zoom:hover {
+    transform: scale(1.1);
+}
+
+/* Additional hover effects */
+.other-hover-effect {
+    /* Add styles for other hover effect */
+}
+
+.other-hover-effect:hover {
+    /* Add styles for other hover effect on hover */
+}
+</style>
+<style>
+  .interactive-button {
+    background: #3498db;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 20px;
+    font-weight: bold;
+      border: 0px;
+      font-family: "Century Gothic";
+      transition: transform 0.3s ease-out;
+  }
+
+  /* Change background color on hover */
+  .interactive-button:hover {
+    background: #2980b9;
+      transform: scale(1.05);
+  }
+</style>
+<style>
+    .image-section {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .image-section img {
+      width: 85px; /* Adjust the width as needed */
+    }
+
+    .image-section p {
+      margin: 5px 0 0; /* Adjust the margin as needed */
+    }
+  </style>
 </head>
 <center>
 <div class="container" style="margin-bottom: 100px">
-    <h2 class="card-title text-center mt-5 pp1" style="margin-bottom: 50px; margin-top: 20px">Customer Reviews</h2>
-     <div class="posts-container">
-        <div class="post-container pp2">
-            <div class="post">
-                <img class="profile-pic" src="user1.jpg" alt="Profile Picture">
-                <div class="post-content">
-                    <div class="nickname">James Smith</div>
-                    <div class="star-rating">★★★★☆</div>
-                    <div class="feedback-comment">I recently bought a classic car from Classic Car Market, and I couldn't be more satisfied. Here's why:
-
-                    Customer Service: The team was incredibly responsive and helpful, answering all my questions with patience and professionalism.
-
-                    Selection: Classic Car Market boasts an impressive lineup of classic cars, making it easy to find the perfect match.
-
-                    Transparency: Their transparency regarding the car's history and condition played a vital role in my decision.
-
-                    Purchase Process: The process was straightforward, with multiple secure payment options available.
-
-                    Delivery: The car arrived in pristine condition, reflecting their attention to detail and care in transportation.
-
-                    Overall, Classic Car Market made my classic car dream come true, and I highly recommend them to fellow enthusiasts.</div>
-                    <div class="post-images">
-
-                        <img src="https://pastandpresentmotorcars.com/website/dealer/shipping2/1" alt="Image 1">
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="post-container pp2">
-            <div class="post">
-                <img class="profile-pic" src="user2.jpg" alt="Profile Picture">
-                <div class="post-content">
-                    <div class="nickname">John Johnson</div>
-                    <div class="star-rating">★★★★★</div>
-                    <div class="feedback-comment">I recently purchased a classic car from Classic Car Market and had a fantastic experience. The customer service was top-notch, the selection was impressive, and the delivery was flawless. I couldn't be happier with my purchase.</div>
-                    <div class="post-images">
-                        <img src="https://pastandpresentmotorcars.com/website/dealer/shipping2/2" alt="Image 3">
-                        <img src="https://pastandpresentmotorcars.com/website/dealer/shipping2/3" alt="Image 4">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="post-container pp2">
-            <div class="post">
-                <img class="profile-pic" src="user3.jpg" alt="Profile Picture">
-                <div class="post-content">
-                    <div class="nickname">Charles Clark</div>
-                    <div class="star-rating">★★★★★</div>
-                    <div class="feedback-comment">Classic Car Market made my classic car dream a reality. Their wide selection, transparent listings, and professional customer service set them apart. The car arrived in perfect condition, and I couldn't be happier.</div>
-                    <div class="post-images">
-                        <img src="https://pastandpresentmotorcars.com/website/dealer/shipping3/1" alt="Image 5">
-                        <img src="https://pastandpresentmotorcars.com/website/dealer/shipping3/2" alt="Image 6">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <h2 class="card-title text-center mt-5 pp1" style="margin-bottom: 20px; margin-top: 20px">Get your vehicle delivered.</h2>
+    <h3 class="pp1" style="font-size: 24px; font-weight: 400">Get your next vehicle delivered with Masterpiece Vintage Home Delivery. Browse inventory online, complete the paperwork, schedule delivery, and admire your new purchase in your driveway.</h3>
+    <a href="{% url 'main' %}#inventory" style="color: none;"><button class="interactive-button pp1" >Start now</button></a>
 </div>
-    <div class="feedback-card pp1">
-            <h2>Leave a Feedback</h2>
-            <form class="p-3" id="feedback-form" enctype="multipart/form-data">
-                <div class="form-group">
-                    <label for="name pp2">Your Name</label>
-                    <input type="text" class="form-control" id="name" name="name" style="border-radius: 0px; border-bottom: 1px solid black" required>
-                </div>
-                <div class="form-group" style="padding-top: 20px;">
-                    <label for="rating pp2" >Rating</label>
-                    <select class="form-control" id="rating" name="rating" required>
-                        <option value="5">&#9733;&#9733;&#9733;&#9733;&#9733;</option>
-                        <option value="4">&#9733;&#9733;&#9733;&#9733;&#9734;</option>
-                        <option value="3">&#9733;&#9733;&#9733;&#9734;&#9734;</option>
-                        <option value="2">&#9733;&#9733;&#9734;&#9734;&#9734;</option>
-                        <option value="1">&#9733;&#9734;&#9734;&#9734;&#9734;</option>
-                    </select>
-                </div>
-                <div class="form-group" style="padding-top: 20px;  border-radius: 0px; border-top: 1px solid grey; border-bottom: 1px solid black" >
-                    <label for="feedback pp2">Your Feedback</label>
-                    <textarea class="form-control" id="feedback" name="feedback" rows="4" required></textarea>
-                </div>
-                <div class="form-group" style="padding-top: 20px">
-                    <label for="image">Upload an Image</label>
-                    <input type="file" class="form-control-file" id="image" name="image">
-                </div>
-                <button type="button" class="btn btn-primary btn-lg mx-auto d-block custom-btn" id="submit-btn" style="margin-top: 20px">Submit</button>
-            </form>
-        </div>
+
+    <div style=" display: flex; flex-wrap: nowrap; flex-direction: row; justify-content: space-evenly">
+        <div class="image-section pp1" style="width: 31%; cursor: pointer;" onclick="redirectToMain()">
+  <img src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2018/png/iconmonstr-check-mark-circle-thin.png&r=0&g=0&b=0" alt="Check Mark">
+  <h3 class="pp1">Choose your car</h3>
+  <p class="pp1" style="width: 100%">Shop our extensive inventory online to find the perfect vehicle. When you’re ready, give us a call.</p>
+</div>
+
+<script>
+  function redirectToMain() {
+    window.location.href = "{% url 'main' %}#inventory";
+  }
+</script>
+
+<div class="image-section pp1" style="width: 31%; cursor: pointer;" onclick="redirectToDocuments()">
+  <img src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2013/png/iconmonstr-navigation-12.png&r=0&g=0&b=0" alt="Navigation Icon">
+  <h3 class="pp1">Documents at home</h3>
+  <p class="pp1">We send you all the paperwork to fill out in the comfort of home. You send it back in the pre-labeled envelope and we schedule delivery.</p>
+</div>
+
+<div class="image-section pp1" style="width: 31%; cursor: pointer;" onclick="redirectToTakeDelivery()">
+  <img src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2014/png/iconmonstr-award-23.png&r=0&g=0&b=0" alt="Award Icon">
+  <h3 class="pp1">Take Delivery</h3>
+  <p class="pp1">We hand you the keys, and it's all yours.</p>
+</div>
+
+<script>
+  function redirectToDocuments() {
+    window.location.href = "{% url 'main' %}#inventory"; // Replace 'documents_home' with your actual URL
+  }
+
+  function redirectToTakeDelivery() {
+    window.location.href = "{% url 'main' %}#inventory"; // Replace 'take_delivery' with your actual URL
+  }
+</script>
+    </div>
+
+    <style>
+    .di2v {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      margin-bottom: 15px;
+      cursor: pointer;
+    }
+
+    .answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+
+    .faq-item.active .answer {
+      max-height: 1000px; /* Set a sufficiently large value to accommodate different answer lengths */
+      transition: max-height 0.3s ease-in;
+    }
+  </style>
+
+
+    <div style="padding-bottom: 50px ;  padding-top: 90px; padding-left: 20px; display: flex; flex-wrap: wrap; flex-direction: column; align-items: flex-start; align-content: flex-start">
+  <h3  class="pp1">Masterpiece Vintage Delivery FAQ</h3>
+
+  <div class="faq-item di2v" onclick="toggleAnswer(1)">
+    <p class="pp1" style="font-weight: 600; font-size: 24px; text-align: left;">What is the delivery process?</p>
+    <div class="answer di2v" style="text-align: left;">
+      <p  class="pp1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor justo sit amet lorem vestibulum, nec hendrerit velit tincidunt.</p>
+    </div>
+  </div>
+
+  <div class="faq-item di2v" onclick="toggleAnswer(2)">
+    <p  class="pp1" style="font-weight: 600; font-size: 24px; text-align: left;">How can I track my delivery?</p>
+    <div class="answer di2v" style="text-align: left;">
+      <p  class="pp1">Tracking information will be sent to your email once the delivery process has started.</p>
+    </div>
+  </div>
+
+  <div class="faq-item di2v" onclick="toggleAnswer(3)">
+    <p  class="pp1" style="font-weight: 600; font-size: 24px; text-align: left;">Are there delivery charges?</p>
+    <div class="answer di2v" style="text-align: left;">
+      <p  class="pp1">Delivery is free for orders above $50. For orders below that amount, a flat fee of $5 applies.</p>
+    </div>
+  </div>
+
+  <div class="faq-item di2v" onclick="toggleAnswer(4)">
+    <p  class="pp1" style="font-weight: 600; font-size: 24px; text-align: left;">Can I reschedule my delivery?</p>
+    <div class="answer di2v" style="text-align: left;">
+      <p  class="pp1">Yes, you can reschedule your delivery by contacting our customer support team at support@example.com.</p>
+    </div>
+  </div>
+
+  <div class="faq-item di2v" onclick="toggleAnswer(5)">
+    <p  class="pp1" style="font-weight: 600; font-size: 24px; text-align: left;">What if I'm not home during the delivery?</p>
+    <div class="answer di2v" style="text-align: left;">
+      <p  class="pp1">Our delivery team will leave a notification, and you can arrange for a redelivery or pick up the item from our local center.</p>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  function toggleAnswer(index) {
+    const faqItem = document.querySelectorAll('.faq-item')[index - 1];
+    faqItem.classList.toggle('active');
+  }
+</script>
+
+
+
 
 </center>
 
@@ -974,7 +1139,7 @@ IN 46184</p>
 
 <style>
     .nav {
-        background-color: rgba(0, 0, 0, 1); /* Semi-transparent black background */
+        background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
         position: fixed; /* Position the navbar absolutely on top of the image */
         width: 100%;
          transition: background-color 1.5s ease;

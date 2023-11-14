@@ -174,4 +174,37 @@ def car_details(request, car_id):
 
     return render(request, 'car_details.html', {'car': car, 'car_photos': car_photos})
 
+
+def shipping(request):
+    return render(request, 'shipping.html')
+
+
+def newariv(request):
+    cars = Car.objects.all()
+
+    # Create a dictionary to store cars grouped by brand
+    cars_by_brand = {}
+
+    cars_by_type = {}
+
+    for car in cars:
+        brand = car.brand
+        type = car.type
+
+        if brand not in cars_by_brand:
+            cars_by_brand[brand] = []
+        cars_by_brand[brand].append(car)
+
+        if type not in cars_by_type:
+            cars_by_type[type] = []
+        cars_by_type[type].append(car)
+
+    # Get a list of all unique brand names
+    brands = list(cars_by_brand.keys())
+    types = list(cars_by_type.keys())
+
+    return render(request, 'arivalls.html',
+                  {'brands': brands, 'types': types, 'cars_by_brand': cars_by_brand, 'car_list': cars,
+                   'cars_by_type': cars_by_type})
+
 # TODO make submit form on feedback template with testing on email, on first car , make delivery included and sale

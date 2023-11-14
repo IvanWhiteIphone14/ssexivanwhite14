@@ -11,6 +11,8 @@ urlpatterns = [
     path('car_details/<int:car_id>/', views.car_details, name='car_details'),
     path('feedback/', views.feedbackurl, name='feedback'),
     path('main/', views.copyindex, name='main'),
+    path('shipping/', views.shipping, name='shipping'),
+    path('arivalls/', views.newariv, name='arivalls'),
     path('submit_form/', views.submit_form, name='submit_form')
 ]
 if settings.DEBUG:
