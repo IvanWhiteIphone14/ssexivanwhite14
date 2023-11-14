@@ -122,12 +122,16 @@ def feedbackurl(request):
                    'cars_by_type': cars_by_type})
 
 
+# views.py
+# Assuming your Car model has the uprice method as mentioned before
+
+# Assuming your Car model has the uprice method as mentioned before
+
 def copyindex(request):
     cars = Car.objects.all()
 
     # Create a dictionary to store cars grouped by brand
     cars_by_brand = {}
-
     cars_by_type = {}
 
     for car in cars:
@@ -142,6 +146,7 @@ def copyindex(request):
             cars_by_type[type] = []
         cars_by_type[type].append(car)
 
+        # Calculate uprice * 1.2 and store it as uprice_multiplied
     # Get a list of all unique brand names
     brands = list(cars_by_brand.keys())
     types = list(cars_by_type.keys())
@@ -149,6 +154,9 @@ def copyindex(request):
     return render(request, 'main.html',
                   {'brands': brands, 'types': types, 'cars_by_brand': cars_by_brand, 'car_list': cars,
                    'cars_by_type': cars_by_type})
+
+
+
 
 
 class CarAdmin(admin.ModelAdmin):
